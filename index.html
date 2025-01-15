@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Documentación - Login</title>
+    <style>
+        /* CSS para el estilo de la página */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .login-container {
+            width: 300px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+        }
+
+        .login-container img {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+
+        .login-container h2 {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .input-field {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .input-field input {
+            border: none;
+            outline: none;
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+        }
+
+        .input-field i {
+            margin-right: 10px;
+            color: #666;
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff6b00;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-button:hover {
+            background-color: #e65a00;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <img src="https://cardmx.com/Portals/0/Logo-cardmx.png?ver=2017-03-09-130008-383" alt="Card MX Logo">
+    <h2>CENTRO DE DOCUMENTACIÓN</h2>
+    <div class="input-field">
+        <i>👤</i>
+        <input type="text" id="username" placeholder="Usuario">
+    </div>
+    <div class="input-field">
+        <i>🔒</i>
+        <input type="password" id="password" placeholder="Contraseña">
+    </div>
+    <button class="login-button" onclick="login()">INGRESAR</button>
+    <div class="error-message" id="error-message">Usuario o contraseña incorrectos</div>
+</div>
+
+<script>
+    // JavaScript para la funcionalidad de login
+    function login() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        const errorMessage = document.getElementById("error-message");
+
+        // Simulación de usuario y contraseña correctos
+        const validUsername = "root";
+        const validPassword = "toor";
+
+
+
+
+
+        if (username === validUsername && password === validPassword) {
+            errorMessage.style.display = "none";
+            // Redirigir a otra página en caso de login exitoso
+            window.location.href = "plantilla.html"; // Cambia "dashboard.html" por la URL a la que quieres redirigir
+        } else {
+            errorMessage.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
